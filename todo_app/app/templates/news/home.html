@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% extends 'main.html' %}
+  {% block content %}
+  <div class="landing-page">
+    <h1>Assalomu alekum</h1>
+    <h2>Yangiliklar Websitega xush kelibsiz</h2>
+  </div>
+  <h1 style="text-align: center; color: #6258AC">Sara Yangiliklar</h1>
+  <div class="items">
+    {% for front in front_new %}
+    <div class="item">
+      <img src="{{ front.image.url }}" alt="">
+      <h2>{{ front.title }}</h2>
+      <p>{{ front.date }}</p>
+      <a href="{% url 'news_detail' front.id %}">
+        <button>Batafsil</button>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  {% endblock %}
+</body>
+</html>

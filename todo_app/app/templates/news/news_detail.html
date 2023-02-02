@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% extends 'main.html' %}
+  {% block content %}
+  <div class="news-detail-div">
+    <img src="{{ news_detail.image.url }}" alt="">
+    <h1>{{ news_detail.title }}</h1>
+    <h2>{{ news_detail.text }}</h2>
+    <h3>{{ news_detail.date }}</h3>
+  </div>
+  
+  {% endblock %}
+</body>
+</html>

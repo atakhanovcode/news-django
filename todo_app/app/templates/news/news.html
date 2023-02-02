@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+  {% block content %}
+  <div class="news">
+    {% for new in news %}
+    <div class="news-detail">
+      <div class="div-1">
+        <img src="{{ new.image.url }}" alt="" width="200px" height="125px">
+      </div>
+      <div class="div-2">
+        <h1>{{ new.title }}</h1>
+        <h2>{{ new.text }}</h2>
+        <p>{{ new.date }}</p>
+        <a href="{{ new.id }}">
+          <button>To'liq o'qing</button>
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endblock %}
